@@ -1,0 +1,31 @@
+<br>
+<h1 class="text-center">Listado de Estudiantes Tesorería</h1>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-dark text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Primer Pago</th>
+                    <th scope="col">Segundo Pago</th>
+                    <th scope="col">Total Pago</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let estudiante of estudiantesData">
+                <tr>
+                    <td>{{estudiante.nombres}}</td>
+                    <td>{{estudiante.apellidos}}</td>
+                    <td>{{estudiante.primerPago}}</td>
+                    <td>{{estudiante.segundoPago}}</td>
+                    <td>{{estudiante.totalPago}}</td>
+                    <td>
+                        <i class="fa-solid fa-pen penColor"></i>
+                        <i class="fa-solid fa-trash trashColor" (click)="eliminarEstudiante(estudiante.id)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

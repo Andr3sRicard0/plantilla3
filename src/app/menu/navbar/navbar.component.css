@@ -1,0 +1,31 @@
+nav {
+    width: 99%;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+.box{
+    display: flex;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+h4{
+    color: #ffffff;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+h4:hover{
+    color: #81ff75;
+    transition: 0.5s;
+}

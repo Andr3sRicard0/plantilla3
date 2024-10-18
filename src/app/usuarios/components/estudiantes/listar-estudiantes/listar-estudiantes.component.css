@@ -1,0 +1,19 @@
+.penColor{
+    color: #00a2ff;
+    margin-right: 20px;
+    transition:0.3s;
+    cursor: pointer;
+}
+.trashColor{
+    color: #ff0000;
+    transition:0.3s;
+    cursor: pointer;
+}
+.penColor:hover{
+    color: #89d4ff;
+    transition:0.3s;
+}
+.trashColor:hover{
+    color: #ff5e5e;
+    transition:0.3s;
+}
