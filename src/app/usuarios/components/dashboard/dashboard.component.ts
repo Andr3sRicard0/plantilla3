@@ -13,31 +13,25 @@ export class DashboardComponent {
   constructor(private estudianteService: EstudianteService){}
 
   ngOnInit():void{
-    this.obtenerEstudiante();
-    this.ordenarEstudiantesPorApellido();
+    this.obtenerEstudiante(); 
   }
 
-  obtenerEstudiante(){
+  obtenerEstudiante() {
     this.estudianteService.getEstudiantes().subscribe(
       (data: EstudiantesModel[]) => {
         this.estudiantesData = data;
+        // Ordenar los estudiantes después de cargar los datos
+        this.ordenarEstudiantesPorApellido();
       },
       (error) => {
         console.error("Error al obtener Estudiantes", error);
       }
-    )
+    );
   }
+  
   ordenarEstudiantesPorApellido() {
     this.estudiantesData.sort((a, b) => {
-      const apellidoA = a.apellidos.toLowerCase();
-      const apellidoB = b.apellidos.toLowerCase();
-      if (apellidoA < apellidoB) {
-        return -1;
-      } else if (apellidoA > apellidoB) {
-        return 1;
-      } else {
-        return 0;
-      }
+      return a.apellidos.toLowerCase().localeCompare(b.apellidos.toLowerCase());
     });
   }
 }

@@ -1,40 +1,38 @@
-<div class="container text-center">
-  <h2>Tesoreria Segundo Bgu C</h2>
+<div class="container-fluid text-center">
   <br>
-  <div class="card">
-    <div class="card-header">
-      <h3>Listado de Estudiantes</h3>
-    </div>
-    <div class="card-body table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">N°</th>
-            <th scope="col">Nombres</th>
-            <th scope="col">Apellidos</th>
-            <th scope="col">Cuota</th>
-            <th scope="col">Fecha</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let estudiantes of estudiantesData; let i = index">
-            <td>{{ i + 1 }}</td>
-            <td>{{estudiantes.nombres}}</td>
-            <td>{{estudiantes.apellidos}}</td>
-            <td [ngClass]="{
-                      'rojo': estudiantes.totalPago === 0,
-                      'amarillo': estudiantes.totalPago > 0 && estudiantes.totalPago < 25,
-                      'verde': estudiantes.totalPago >= 25
-                    }"> 
-              <ng-container *ngIf="estudiantes.totalPago === 0">Pago Pendiente</ng-container>
-              <ng-container *ngIf="estudiantes.totalPago > 0 && estudiantes.totalPago < 25">Pago Parcial</ng-container>
-              <ng-container *ngIf="estudiantes.totalPago >= 25">Pagado</ng-container>
-            </td>
-            <td>{{estudiantes.updated_at| date:'dd/MM/yyyy'}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+  <h2>Estudiantes Segundo BGU C</h2>
+  <br>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Cuota</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let estudiantes of estudiantesData, let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{estudiantes.nombres}}</td>
+        <td>{{estudiantes.apellidos}}</td>
+        <td [ngClass]="{
+        'rojo': estudiantes.totalPago === 0,
+        'amarrillo': estudiantes.totalPago > 0 && estudiantes.totalPago < 25,
+        'verde': estudiantes.totalPago === 25
+        }">
+          <ng-container *ngIf="estudiantes.totalPago === 0">Pago Pendiente</ng-container>
+          <ng-container *ngIf="estudiantes.totalPago > 0 && estudiantes.totalPago < 25">Pago Parcial de la
+            Cuota</ng-container>
+          <ng-container *ngIf="estudiantes.totalPago === 25">Cuota Pagada</ng-container>
+        </td>
+        <td>{{estudiantes.updated_at | date:'dd/MM/yyyy'}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-container *ngIf="estudiantesData.length === 0">
+    <h2>No existen estudiantes registrados</h2>
+  </ng-container>
 </div>
 <div class="espacio"></div>

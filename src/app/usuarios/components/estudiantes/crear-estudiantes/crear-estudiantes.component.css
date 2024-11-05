@@ -1,0 +1,43 @@
+h2{
+    color: #ffffff;
+}
+.espacio{
+    height: 50px;
+}
+input[type="file"] {
+    position: relative;
+    border: 2px dashed #ffffff;
+    color: transparent; /* Oculta el texto predeterminado */
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    background:  rgba(255, 0, 234, 0.2);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+input[type="file"]::file-selector-button {
+    display: none;
+}
+input[type="file"]:hover{
+    background:  rgba(183, 0, 255, 0.4);
+    transition: 0.5s;
+}
+input[type="file"]::before {
+    content: 'Seleccionar archivo +'; /* Texto que se mostrará */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centra el texto */
+    color: #ffffff; /* Color del texto */
+    font-size: 20px; /* Tamaño del texto */
+    font-weight: bold;
+}
+th{
+    background:  rgba(255, 0, 234, 0.2);
+    color: #ffffff;
+}
+td{
+    background: rgba(0, 204, 255, 0.2);
+    color: #ffffff;
+}

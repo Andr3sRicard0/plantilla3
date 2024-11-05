@@ -3,8 +3,8 @@ nav {
     height: 60px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background:  rgba(255, 0, 234, 0.2);
+    backdrop-filter: blur(2px);
     position: fixed;
     left: 0;
     right: 0;
@@ -19,13 +19,13 @@ nav {
 }
 a{
     text-decoration: none;
-}
-h4{
     color: #ffffff;
     margin-left: 20px;
     transition: 0.5s;
+    font-weight: bold;
+    font-size: 18px;
 }
-h4:hover{
-    color: #81ff75;
+a:hover{
+    color: #b53dc0;
     transition: 0.5s;
 }

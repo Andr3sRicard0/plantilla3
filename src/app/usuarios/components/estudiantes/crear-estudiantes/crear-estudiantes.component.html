@@ -1,1 +1,33 @@
-<p>crear-estudiantes works!</p>
+<div class="container-fluid text-center">
+    <h2>Cargar Alumnos</h2>
+    <br>
+    <input type="file" (change)="cargarArchivos($event)" accept=".xlsx, .xls">
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>N°</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Primer Pago</th>
+                <th>Segundo Pago</th>
+                <th>Total Pago</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let estudiantes of dataEstudiantes, let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{estudiantes.nombres}}</td>
+                <td>{{estudiantes.apellidos}}</td>
+                <td>{{estudiantes.primerPago}}</td>
+                <td>{{estudiantes.segundoPago}}</td>
+                <td>{{estudiantes.totalPago}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-container *ngIf="dataEstudiantes.length === 0">
+        <h2>No existen estudiantes en la BD.</h2>
+    </ng-container>
+</div>
+<div class="espacio"></div>

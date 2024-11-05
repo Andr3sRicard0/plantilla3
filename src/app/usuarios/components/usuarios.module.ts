@@ -7,13 +7,15 @@ import { MenuModule } from 'src/app/menu/menu.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ListarEstudiantesComponent } from './estudiantes/listar-estudiantes/listar-estudiantes.component';
 import { CrearEstudiantesComponent } from './estudiantes/crear-estudiantes/crear-estudiantes.component';
+import { GastosComponent } from './gastos/gastos.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     HomeComponent,
     ListarEstudiantesComponent,
-    CrearEstudiantesComponent
+    CrearEstudiantesComponent,
+    GastosComponent
   ],
   exports:[
     DashboardComponent,

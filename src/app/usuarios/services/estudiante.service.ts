@@ -12,26 +12,26 @@ export class EstudianteService {
   private apiUrl = environment.apiEnv;
 
   constructor(
-    private http : HttpClient
+    private http: HttpClient
   ) { }
   //crear estudiante
-  createEstudiante(estudiante: EstudiantesModel): Observable<any>{
+  createEstudiante(estudiante: EstudiantesModel): Observable<any> {
     return this.http.post(`${this.apiUrl}/estudiante`, estudiante);
   }
   //llamar a los estudiantes
-  getEstudiantes(): Observable<any[]>{
+  getEstudiantes(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/estudiante`);
   }
   //llamar por id
-  getEstudianteById(id: number): Observable<EstudiantesModel>{
-    return this.http.get<EstudiantesModel>(`${this.apiUrl}/estudiante/${id}`, );
+  getEstudianteById(id: number): Observable<EstudiantesModel> {
+    return this.http.get<EstudiantesModel>(`${this.apiUrl}/estudiante/${id}`,);
   }
-  //actualizar estudiante
-  updateEstudiante(estudiante : EstudiantesModel): Observable<any>{
-    return this.http.put(`${this.apiUrl}/estudiante`, estudiante);
+  // actualizar estudiante
+  updateEstudiante(estudiante: EstudiantesModel): Observable<any> {
+    return this.http.put(`${this.apiUrl}/estudiante/${estudiante.id}`, estudiante);
   }
   //eliminar estudiante
   deleteEstudiante(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/estudiante/${id}`);
-}
+  }
 }

@@ -1,39 +1,28 @@
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    /* Color semi-transparente */
-    backdrop-filter: blur(10px);
-    /* Aplicar desenfoque */
-    border-radius: 10px;
-    /* Bordes redondeados */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    /* Borde sutil */
-    padding: 20px;
-    color: #ffffff;
-}
 h2{
     color: #ffffff;
 }
-th,
-td {
-    background: rgba(255, 255, 255, 0.1);
-    /* Fondo transparente para celdas */
-    color: #fff;
-    /* Color del texto */
-    backdrop-filter: blur(10px);
-    /* Menor desenfoque en las celdas */
-}
-
-.rojo {
-    background: rgb(255, 136, 0, 0.2);
-}
-
-.amarillo {
-    background: rgba(255, 230, 0, 0.2);
-}
-
-.verde {
-    background: rgba(0, 255, 13, 0.2);
-}
 .espacio{
-    height: 20px;
+    height: 50px;
+}
+th{
+    background:  rgba(255, 0, 234, 0.2);
+    color: #ffffff;
+}
+td{
+    background: rgba(0, 204, 255, 0.2);
+    color: #ffffff;
+    transition: 0.5s;
+}
+tbody tr:hover{
+    background: rgba(0, 204, 255, 0.4);
+    transition: 0.5s;
+}
+.rojo{
+    background: rgba(255, 0, 0, 0.4);
+}
+.amarrillo{
+    background: rgba(255, 251, 0, 0.4);
+}
+.verde{
+    background: rgba(30, 255, 0, 0.4);
 }

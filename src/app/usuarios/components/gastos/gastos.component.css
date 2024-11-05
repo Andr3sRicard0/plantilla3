@@ -1,0 +1,12 @@
+th{
+    background:  rgba(255, 0, 234, 0.3);
+    color: #ffffff;
+}
+td{
+    background: rgba(0, 204, 255, 0.3);
+    color: #ffffff;
+    transition: 0.5s;
+}
+h2{
+    color: #ffffff;
+}
