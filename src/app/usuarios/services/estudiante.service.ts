@@ -24,7 +24,7 @@ export class EstudianteService {
   }
   //llamar por id
   getEstudianteById(id: number): Observable<EstudiantesModel> {
-    return this.http.get<EstudiantesModel>(`${this.apiUrl}/estudiante/${id}`,);
+    return this.http.get<EstudiantesModel>(`${this.apiUrl}/estudiante/${id}`);
   }
   // actualizar estudiante
   updateEstudiante(estudiante: EstudiantesModel): Observable<any> {
