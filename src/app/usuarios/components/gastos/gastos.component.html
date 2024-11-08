@@ -26,14 +26,22 @@
     <h2>Gastos</h2>
     <table class="table">
       <thead>
-        <th>N°</th>
-        <th>Gasto</th>
-        <th>Dinero Invertido</th>
+        <tr>
+          <th>N°</th>
+          <th>Gasto</th>
+          <th>Dinero Invertido</th>
+        </tr>
       </thead>
-      <tbody>
-        
+      <tbody *ngFor="let gastos of dataGastos, let i = index">
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{gastos.descripcion}}</td>
+          <td>{{gastos.costo}}</td>
+        </tr>
       </tbody>
     </table>
-    <h2>No existen gastos por el momento</h2>
+    <ng-container *ngIf="dataGastos.length === 0">
+      <h2>No existen gastos por el momento</h2>
+    </ng-container>
   </section>
 </div>
