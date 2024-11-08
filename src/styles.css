@@ -1,11 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
+html,
+body {
     height: 100%;
 }
 
 body {
-    background: radial-gradient(circle, rgba(0,11,89,1) 0%, rgba(0,0,0,1) 100%);
+    background: radial-gradient(circle, rgba(0, 11, 89, 1) 0%, rgba(0, 0, 0, 1) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+
+* {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
